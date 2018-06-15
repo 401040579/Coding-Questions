@@ -1,3 +1,5 @@
+#include <stdio.h>
+
 void htol(char s[])
 {
     for(int i = 0; i<strlen(s);++i)
