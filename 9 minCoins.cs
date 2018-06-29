@@ -23,7 +23,7 @@ namespace minCoins
 
             return res;
         }
-        
+
         //non-rec
         private static int minCoin_nonrec(int[] nums, int amount)
         {
@@ -52,7 +52,10 @@ namespace minCoins
                     }
                 }
             }
-            return dp[amount];
+            if (dp[amount] > amount || dp[amount] < 0)
+                return -1;
+            else
+                return dp[amount];
         }
 
         static void Main(string[] args)
@@ -61,7 +64,7 @@ namespace minCoins
             int amount = 13;
             int coin = 0;
 
-            coin = minCoin_nonrec(nums, amount);
+            coin = minCoin(nums, amount);
             Console.WriteLine(coin);
         }
 
