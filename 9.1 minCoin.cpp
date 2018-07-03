@@ -2,7 +2,7 @@
 #include<climits>
 #include <vector>
 
-using namespace std;
+using std::cout;
 
 int min(int a, int b)
 {
