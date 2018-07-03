@@ -1,6 +1,6 @@
 #include<iostream> 
 #include<climits>
-#include <vector>
+#include<vector>
 
 using std::cout;
 
@@ -25,6 +25,7 @@ int minCoin(int nums[], int amount, int length)
 	return res;
 }
 
+//non-rec, dp
 int minCoin_nonrec(int nums[], int amount, int length)
 {
 	if (amount == 0) return 0;
