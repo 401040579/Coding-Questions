@@ -43,7 +43,7 @@ Node* newNode(int data)
 {
 	Node *temp = new Node;
 	temp->data = data;
-	temp->left = temp->right = NULL;
+	temp->left = temp->right = nullptr;
 	return temp;
 }
 
