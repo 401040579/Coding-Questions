@@ -7,37 +7,30 @@ using std::unordered_set;
 //O(n^3)time O(1)space
 void tripletsSumZero_1(int arr[], int length)
 {
-	bool isFound = false;
-
 	for (int i = 0; i < length - 2; i++)
 		for (int j = i + 1; j < length - 1; j++)
 			for (int k = j + 1; k < length; k++)
 				if (arr[i] + arr[j] + arr[k] == 0)
 				{
 					cout << "{" << arr[i] << "," << arr[j] << "," << arr[k] << "}" << "\n";
-					isFound = true;
 				}
-	if (!isFound)
-		cout<<"not exist\n";
 }
 
 //O(n^2)time O(n)space
 void tripletsSumZero_2(int arr[], int length)
 {
-	bool isFound = false;
-
 	for (int i = 0; i < length - 1; i++)
 	{
 		unordered_set<int> myset;
 
 		for (int j = i + 1; j < length; j++)
 		{
+			// looking for -(arr[i]+arr[j]) which sum up to zero
 			int target = -(arr[i] + arr[j]);
 
 			if (myset.find(target) != myset.end())
 			{
 				cout << "{" << arr[i] << "," << target << "," << arr[j] << "}" << "\n";
-				isFound = true;
 			}
 			else
 			{
@@ -45,8 +38,6 @@ void tripletsSumZero_2(int arr[], int length)
 			}
 		}
 	}
-	if (!isFound)
-		cout << "not exist\n";
 }
 
 int main()
