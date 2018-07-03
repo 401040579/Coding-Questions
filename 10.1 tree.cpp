@@ -55,7 +55,7 @@ int main()
 	root->left->left = newNode(4);
 	root->left->right = newNode(5);
 	root->right->right = newNode(6);
-	/*				  1
+	/*	      1
                    /     \
                   2       3
                 /   \       \
