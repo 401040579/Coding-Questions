@@ -20,3 +20,12 @@ let onlyNumbers = things.filter(function(thing) {
 
 console.log(onlyNumbers);
 
+
+let fruits = ['mango', 'papaya', 'pineapple', 'apple'];
+
+// Iterate over fruits below
+fruits.forEach(function(fruit){
+               console.log('I want to eat a '+fruit)
+});
+// using arrow function syntax
+fruits.forEach(fruit => console.log('I want to eat a '+fruit));
