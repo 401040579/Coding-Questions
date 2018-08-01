@@ -39,7 +39,7 @@ const displaySuggestions = (event) => {
 submit.addEventListener('click', displaySuggestions);
 
 // information to reach Rebrandly API
-const apiKey = '<Your API Key>';
+const apiKey = 'f31b481b49b74c5c8b2f906639e3a685';
 const rebrandlyEndpoint = 'https://api.rebrandly.com/v1/links';
 
 // element selector
